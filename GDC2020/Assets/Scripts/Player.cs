@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Fetches Rigidbody2D
-    Rigidbody2D m_Rigidbody;
+    public float moveSpeed = 3;
 
-    // Sets the speed of the player
-    public int moveSpeed = 1;
+    public Rigidbody myRigidbody;
 
     // Start is called before the first frame update
     void Start()
@@ -19,14 +17,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            m_Rigidbody.velocity = transform.forward * moveSpeed;
-        }
+        transform.Translate(0, 0, moveSpeed * Time.deltaTime);
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        
+        Move();
     }
+
+    public void Move() {
+        // Blue vector forward (blue) is the one which moves the player downward, so right vector(red) is used as forward instead.
+        Vector3 forwardMovement  = transform.right * Input.GetAxis("Vertical");
+    }
+
 }
