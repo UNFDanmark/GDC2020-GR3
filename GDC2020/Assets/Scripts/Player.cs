@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
 
         Vector2 upwardMovement = transform.up * Input.GetAxis("Vertical") * moveSpeed;
 
-        myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, 0) + upwardMovement;
+        myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, 0) + -upwardMovement;
     }
 
 
