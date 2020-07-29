@@ -26,21 +26,12 @@ public class Player : MonoBehaviour
         Move();
         Strafe();
 
-       // if (Input.GetKey(KeyCode.A)){
-         //   transform.position -= Vector3.right * Time.deltaTime;
-        // }
-       // else if (Input.GetKey(KeyCode.D))
-        //{
-      //      transform.position += Vector3.right * Time.deltaTime;
-       // }
     }
 
     public void Move()
     {
         // Blue vector forward (blue) is the one which moves the player downward, so right vector(red) is used as forward instead.
-        //Vector3 forwardMovement  = transform.right * Input.GetAxis("Vertical");
-
-      
+             
 
         Vector2 upwardMovement = transform.up * Input.GetAxis("Vertical") * moveSpeed;
 
