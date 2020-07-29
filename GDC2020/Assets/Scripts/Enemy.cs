@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
+    public float enemySpeed = 4;
+
+
+    public Rigidbody enemyRigidbody;
+    
     // Start is called before the first frame update
     void Start()
     {
