@@ -8,6 +8,7 @@ public class Respawner : MonoBehaviour
 {
     public void RespawnButtonClicked()
     {
+        
         SceneManager.LoadScene("SampleScene");
     }
 }
