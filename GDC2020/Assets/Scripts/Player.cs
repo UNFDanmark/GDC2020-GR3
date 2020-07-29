@@ -50,8 +50,8 @@ public class Player : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Enemy"))
+        if (collision.collider.CompareTag("Enemy"));
 
-            KillPlayer();
+            //KillPlayer();
     }
 }
