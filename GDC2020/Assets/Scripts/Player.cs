@@ -28,29 +28,25 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         Move();
-        Strafe();
 
     }
 
     public void Move()
     {
         // Blue vector forward (blue) is the one which moves the player downward, so right vector(red) is used as forward instead.
-             
 
-        Vector2 upwardMovement = transform.up * Input.GetAxis("Vertical") * moveSpeed;
 
-        myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, 0) + upwardMovement;
+        Vector2 upwardMovement = transform.up * Input.GetAxis("Vertical");
+        Vector2 sideMovement = transform.right * Input.GetAxis("Horizontal");
+        Vector2 allMovement = upwardMovement + sideMovement;
+
+        allMovement.Normalize();
+
+
+        myRigidbody.velocity = allMovement * moveSpeed;
     }
 
 
-    public void Strafe()
-    {
-
-        Vector2 sideMovement = transform.right * Input.GetAxis("Horizontal") * moveSpeed;
-
-        myRigidbody.velocity = new Vector2(0, myRigidbody.velocity.y) + sideMovement;
-
-    }
 
     public void OnCollisionEnter(Collision collision)
     {
