@@ -47,4 +47,11 @@ public class Player : MonoBehaviour
         myRigidbody.velocity = new Vector2(0, myRigidbody.velocity.y) + sideMovement;
 
     }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Enemy"))
+
+            KillPlayer();
+    }
 }
