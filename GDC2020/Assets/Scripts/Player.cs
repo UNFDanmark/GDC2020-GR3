@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public float moveSpeed = 3.5f;
 
     public Rigidbody myRigidbody;
+    public GameObject musicalNotePrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetMouseButtonDown(0))
+        {
+            shootMusicalNote();
+        }
     }
 
     void FixedUpdate()
@@ -56,4 +60,15 @@ public class Player : MonoBehaviour
         //}
             
     }
+
+    // Method for shooting musical notes.
+    public void shootMusicalNote()
+    {
+        GameObject newMusicalNote = Instantiate(musicalNotePrefab);
+
+        newMusicalNote.transform.position = transform.position;
+        newMusicalNote.transform.rotation = transform.rotation;
+
+    }
+
 }
