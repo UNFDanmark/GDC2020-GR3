@@ -1947,6 +1947,7 @@ GameObject:
   - component: {fileID: 1766539190}
   - component: {fileID: 1766539194}
   - component: {fileID: 1766539193}
+  - component: {fileID: 1766539195}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -2064,6 +2065,28 @@ MonoBehaviour:
   myRigidbody: {fileID: 1766539190}
   musicalNotePrefab: {fileID: 3862083477377185200, guid: 63a82def87383d94196c5931c6c72755,
     type: 3}
+--- !u!114 &1766539195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766539189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5108d2b7f1fe1ff46999b432824d8db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crosshair: {fileID: 1805047986}
+  player: {fileID: 1766539192}
+  NoteBulletPrefab: {fileID: 3862083477377185200, guid: 63a82def87383d94196c5931c6c72755,
+    type: 3}
+  timeOfLastNote: 0
+  coolDown: 1.5
+  knockBack: 2
+  myRigidbody: {fileID: 0}
+  playerCam: {fileID: 2050872200}
+  bulletSpeed: 60
 --- !u!1 &1805047986
 GameObject:
   m_ObjectHideFlags: 0
@@ -2269,7 +2292,6 @@ GameObject:
   - component: {fileID: 2050872200}
   - component: {fileID: 2050872199}
   - component: {fileID: 2050872198}
-  - component: {fileID: 2050872202}
   m_Layer: 8
   m_Name: Camera
   m_TagString: MainCamera
@@ -2373,25 +2395,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2050872202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2050872197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5108d2b7f1fe1ff46999b432824d8db2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crosshair: {fileID: 1805047986}
-  player: {fileID: 1766539192}
-  NoteBulletPrefab: {fileID: 3862083477377185200, guid: 63a82def87383d94196c5931c6c72755,
-    type: 3}
-  timeOfLastNote: 0
-  coolDown: 1.5
-  bulletSpeed: 60
 --- !u!1 &2069993247
 GameObject:
   m_ObjectHideFlags: 0

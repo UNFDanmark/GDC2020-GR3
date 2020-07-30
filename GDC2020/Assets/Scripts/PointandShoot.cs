@@ -10,6 +10,9 @@ public class PointandShoot : MonoBehaviour
     public GameObject NoteBulletPrefab;
     public float timeOfLastNote = 0;
     public float coolDown = 1.5f;
+    public float knockBack = 2;
+    public Rigidbody myRigidbody;
+    public Camera playerCam;
 
     public float bulletSpeed = 60;
 
@@ -18,6 +21,7 @@ public class PointandShoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        myRigidbody = GetComponent<Rigidbody>();
         Cursor.visible = false;
         timeOfLastNote = -coolDown;
     }
@@ -25,7 +29,7 @@ public class PointandShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        target = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
+        target = playerCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
         crosshair.transform.position = new Vector2(target.x, target.y);
 
 
@@ -40,6 +44,8 @@ public class PointandShoot : MonoBehaviour
             Vector2 direction = difference / distance;
             direction.Normalize();
             fireBullet(direction, rotationZ);
+
+            myRigidbody.AddForce(-transform.forward);
 
         }
     
