@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class bulletTwo : MonoBehaviour
 {
-    // Variables
 
-    public float forwardSpeed = 4;
+    public float forwardSpeed = 3;
     public Rigidbody myRigidbody;
+
 
     // Start is called before the first frame update
     void Start()

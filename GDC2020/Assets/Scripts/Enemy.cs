@@ -46,10 +46,21 @@ public class Enemy : MonoBehaviour
         {
             KillPlayer();
         }
+
+        else if (collision.collider.CompareTag("mNode"))
+        {
+            Destroy(enemyRigidbody);
+
+        }
     }
 
     public void KillPlayer()
     {
         SceneManager.LoadScene("GameOver");
+    }
+
+    public void Destroy()
+    {
+        Destroy(enemyRigidbody);
     }
 }
