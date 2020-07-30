@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     private Vector2 movement;
     public Transform player;
     public Rigidbody enemyRigidbody;
+    public AudioClip clip;
     
     // Start is called before the first frame update
     void Start()
@@ -49,6 +50,7 @@ public class Enemy : MonoBehaviour
 
         else if (collision.collider.CompareTag("mNode"))
         {
+            AudioSource.PlayClipAtPoint(clip, new Vector3(0, 0, 0));
             Destroy(gameObject);
 
         }

@@ -24,10 +24,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         // Makes it possible to shoot
-        if (Input.GetMouseButtonDown(0) && Time.time - timeOfLastNote > coolDown)
-        {
-            shootMusicalNote();
-        }
+        //if (Input.GetMouseButtonDown(0) && Time.time - timeOfLastNote > coolDown)
+        //{
+        //    shootMusicalNote();
+        //}
     }
 
     void FixedUpdate()
@@ -63,13 +63,13 @@ public class Player : MonoBehaviour
     }
 
     // Method for shooting musical notes.
-    public void shootMusicalNote()
-    {
-        GameObject newMusicalNote = Instantiate(musicalNotePrefab);
+    //public void shootMusicalNote()
+    //{
+    //    GameObject newMusicalNote = Instantiate(musicalNotePrefab);
 
-        newMusicalNote.transform.position = transform.position;
-        newMusicalNote.transform.rotation = transform.rotation;
+    //    newMusicalNote.transform.position = transform.position;
+    //    newMusicalNote.transform.rotation = transform.rotation;
 
-    }
+    //}
 
 }
