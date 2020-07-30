@@ -28,24 +28,26 @@ public class PointandShoot : MonoBehaviour
 
 
     //    Vector3 difference = target - player.transform.position;
-    //    //float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-    //    //player.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
+    //    float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+    //    player.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
 
     //    if (Input.GetMouseButtonDown(0))
     //    {
     //        float distance = difference.magnitude;
     //        Vector2 direction = difference / distance;
     //        direction.Normalize();
-    //        fireBullet(direction, target);
+    //        fireBullet(direction, rotationZ);
 
     //    }
-      
+    
     //}
 
-    //void fireBullet(Vector2 dirction, float target)
+    //void fireBullet(Vector2 direction, float rotationZ)
     //{
-    //    GameObject bulletz = Instantiate(NoteBulletPrefab) as GameObject;
-    //    bulletz.transform.position = player.transform.position;
+    //    GameObject bnode = Instantiate(NoteBulletPrefab) as GameObject;
+    //    bnode.transform.position = player.transform.position;
+    //    bnode.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
+    //    bnode.GetComponent<Rigidbody>().velocity = direction * bulletSpeed;   
 
     }
 }
