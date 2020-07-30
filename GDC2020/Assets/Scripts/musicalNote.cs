@@ -23,7 +23,7 @@ public class bullet : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision col)
     {
         Destroy(gameObject);
     }

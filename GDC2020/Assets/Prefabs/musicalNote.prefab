@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3862083477377185205}
   - component: {fileID: 3862083477377185202}
   - component: {fileID: 3862083477377185203}
-  m_Layer: 0
-  m_Name: BulletTwo
+  m_Layer: 10
+  m_Name: musicalNote
   m_TagString: mNode
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
