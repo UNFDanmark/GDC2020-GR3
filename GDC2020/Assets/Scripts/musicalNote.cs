@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    // Variables
-
     public float forwardSpeed = 4;
+
     public Rigidbody myRigidbody;
 
     // Start is called before the first frame update
     void Start()
     {
-        myRigidbody.velocity = transform.forward * forwardSpeed;
+        myRigidbody.velocity = transform.up * forwardSpeed;
 
-        Destroy(gameObject);
+        Destroy(gameObject, t:1);
     }
 
     // Update is called once per frame

@@ -10,16 +10,21 @@ public class Player : MonoBehaviour
     public Rigidbody myRigidbody;
     public GameObject musicalNotePrefab;
 
+    // Cooldown timer.
+    public float timeOfLastNote = 0;
+    public float coolDown = 1;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        timeOfLastNote = -coolDown;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        // Makes it possible to shoot
+        if (Input.GetMouseButtonDown(0) && Time.time - timeOfLastNote > coolDown)
         {
             shootMusicalNote();
         }
