@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3862083477377185205}
   - component: {fileID: 3862083477377185202}
   - component: {fileID: 3862083477377185203}
+  - component: {fileID: -4999728259634304663}
   m_Layer: 10
   m_Name: musicalNote
   m_TagString: mNode
@@ -112,3 +113,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
+--- !u!114 &-4999728259634304663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3862083477377185200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1aaa3ff42001b7458df7e2d15911056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forwardSpeed: 10
+  myRigidbody: {fileID: 3862083477377185203}
