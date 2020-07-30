@@ -5,12 +5,12 @@ using UnityEngine;
 public class enemySpawner : MonoBehaviour
 {
     public GameObject EnemyPrefab;
-    public int nrOfEnemies = 1;
+    public int nrOfEnemies = 2;
 
     // Start is called before the first frame update
     void Start()
     {
-        //for (int i = 1; i < nrOfEnemies; i++)
+        //for (int i = 0; i > nrOfEnemies; i++)
         //{
         //    SpawnEnemy();
         //}
