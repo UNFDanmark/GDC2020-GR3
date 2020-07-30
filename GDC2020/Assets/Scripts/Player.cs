@@ -41,8 +41,8 @@ public class Player : MonoBehaviour
         // Blue vector forward (blue) is the one which moves the player downward, so right vector(red) is used as forward instead.
 
 
-        Vector2 upwardMovement = transform.up * Input.GetAxis("Vertical");
-        Vector2 sideMovement = transform.right * Input.GetAxis("Horizontal");
+        Vector2 upwardMovement = transform.right * Input.GetAxis("Vertical");
+        Vector2 sideMovement = transform.up * Input.GetAxis("Horizontal");
         Vector2 allMovement = upwardMovement + sideMovement;
 
         allMovement.Normalize();

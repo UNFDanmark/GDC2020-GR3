@@ -11,7 +11,7 @@ public class musicalNote : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myRigidbody.velocity = transform.up * forwardSpeed;
+        myRigidbody.velocity = transform.right * forwardSpeed;
 
         Destroy(gameObject, t:1);
     }

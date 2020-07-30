@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour
 
         else if (collision.collider.CompareTag("mNode"))
         {
-            Destroy(enemyRigidbody);
+            Destroy(gameObject);
 
         }
     }
@@ -61,6 +61,6 @@ public class Enemy : MonoBehaviour
 
     public void Destroy()
     {
-        Destroy(enemyRigidbody);
+        Destroy(gameObject);
     }
 }

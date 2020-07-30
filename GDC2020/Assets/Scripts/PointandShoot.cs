@@ -27,27 +27,27 @@ public class PointandShoot : MonoBehaviour
 
 
 
-    //    Vector3 difference = target - player.transform.position;
-    //    float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-    //    player.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
+        Vector3 difference = target - player.transform.position;
+        float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        player.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
 
-    //    if (Input.GetMouseButtonDown(0))
-    //    {
-    //        float distance = difference.magnitude;
-    //        Vector2 direction = difference / distance;
-    //        direction.Normalize();
-    //        fireBullet(direction, rotationZ);
+        if (Input.GetButtonDown("Fire1"))
+        {
+            float distance = difference.magnitude;
+            Vector2 direction = difference / distance;
+            direction.Normalize();
+            fireBullet(direction, rotationZ);
 
-    //    }
+        }
     
-    //}
+    }
 
-    //void fireBullet(Vector2 direction, float rotationZ)
-    //{
-    //    GameObject bnode = Instantiate(NoteBulletPrefab) as GameObject;
-    //    bnode.transform.position = player.transform.position;
-    //    bnode.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
-    //    bnode.GetComponent<Rigidbody>().velocity = direction * bulletSpeed;   
+    void fireBullet(Vector2 direction, float rotationZ)
+    {
+        GameObject bnode = Instantiate(NoteBulletPrefab) as GameObject;
+        bnode.transform.position = player.transform.position;
+        bnode.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
+        bnode.GetComponent<Rigidbody>().velocity = direction * bulletSpeed;   
 
     }
 }
