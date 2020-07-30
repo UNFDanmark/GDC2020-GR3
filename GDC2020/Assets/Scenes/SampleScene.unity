@@ -1708,12 +1708,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1117527223 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2580902490215471897, guid: f96f8de4226c4f74295e0885cde8ea5b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2580902491365594574}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1156746970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2580902490215471892, guid: f96f8de4226c4f74295e0885cde8ea5b,
@@ -1861,7 +1855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ebb82bc669c5a4abd78f3c370f3828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 1117527223}
+  EnemyPrefab: {fileID: 465612708}
   nrOfEnemies: 2
 --- !u!4 &1718443895
 Transform:
