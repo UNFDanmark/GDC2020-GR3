@@ -8,6 +8,8 @@ public class PointandShoot : MonoBehaviour
     public GameObject crosshair;
     public Transform player;
     public GameObject NoteBulletPrefab;
+    public float timeOfLastNote = 0;
+    public float coolDown = 1.5f;
 
     public float bulletSpeed = 60;
 
@@ -17,6 +19,7 @@ public class PointandShoot : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;
+        timeOfLastNote = -coolDown;
     }
 
     // Update is called once per frame
@@ -31,7 +34,7 @@ public class PointandShoot : MonoBehaviour
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         player.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && Time.time - timeOfLastNote >= coolDown)
         {
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
@@ -44,6 +47,8 @@ public class PointandShoot : MonoBehaviour
 
     void fireBullet(Vector2 direction, float rotationZ)
     {
+        timeOfLastNote = Time.time;
+
         GameObject bnode = Instantiate(NoteBulletPrefab) as GameObject;
         bnode.transform.position = player.transform.position;
         bnode.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);

@@ -11,13 +11,13 @@ public class Player : MonoBehaviour
     public GameObject musicalNotePrefab;
 
     // Cooldown timer.
-    public float timeOfLastNote = 0;
-    public float coolDown = 1;
+    //public float timeOfLastNote = 0;
+    //public float coolDown = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        timeOfLastNote = -coolDown;
+        //timeOfLastNote = -coolDown;
     }
 
     // Update is called once per frame
@@ -41,8 +41,8 @@ public class Player : MonoBehaviour
         // Blue vector forward (blue) is the one which moves the player downward, so right vector(red) is used as forward instead.
 
 
-        Vector2 upwardMovement = transform.right * Input.GetAxis("Vertical");
-        Vector2 sideMovement = transform.up * Input.GetAxis("Horizontal");
+        Vector2 upwardMovement = Vector3.up * Input.GetAxis("Vertical");
+        Vector2 sideMovement = Vector3.right * Input.GetAxis("Horizontal");
         Vector2 allMovement = upwardMovement + sideMovement;
 
         allMovement.Normalize();

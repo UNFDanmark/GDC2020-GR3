@@ -2064,8 +2064,6 @@ MonoBehaviour:
   myRigidbody: {fileID: 1766539190}
   musicalNotePrefab: {fileID: 3862083477377185200, guid: 63a82def87383d94196c5931c6c72755,
     type: 3}
-  timeOfLastNote: 2
-  coolDown: 1
 --- !u!1 &1805047986
 GameObject:
   m_ObjectHideFlags: 0
@@ -2391,6 +2389,8 @@ MonoBehaviour:
   player: {fileID: 1766539192}
   NoteBulletPrefab: {fileID: 3862083477377185200, guid: 63a82def87383d94196c5931c6c72755,
     type: 3}
+  timeOfLastNote: 0
+  coolDown: 1.5
   bulletSpeed: 60
 --- !u!1 &2069993247
 GameObject:
