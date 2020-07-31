@@ -26,7 +26,7 @@ public class enemySpawner : MonoBehaviour
         //    SpawnEnemy();
         //}
 
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 4; i++)
         {
             SpawnEnemy();
         }

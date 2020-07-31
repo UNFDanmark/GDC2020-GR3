@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2580902490215471895}
   - component: {fileID: 2580902490215471894}
   - component: {fileID: 2580902490215471893}
-  - component: {fileID: 2580902490215471890}
+  - component: {fileID: 3290517977051762002}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Enemy
@@ -117,8 +117,8 @@ MonoBehaviour:
   player: {fileID: 4111717188946787797, guid: 23ebfbf6474825d43a87d27d4bdf796a, type: 3}
   enemyRigidbody: {fileID: 2580902490215471894}
   clip: {fileID: 8300000, guid: 3828ec38bad2af64187f97358dc43f62, type: 3}
---- !u!65 &2580902490215471890
-BoxCollider:
+--- !u!135 &3290517977051762002
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -128,7 +128,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.18, y: 0.18, z: 5}
+  m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2580902490251581667
 GameObject:
