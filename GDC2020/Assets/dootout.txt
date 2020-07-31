@@ -1,0 +1,12 @@
+|--------------|--------------|
+|Forward       |      W       |
+|Left          |      A       |
+|Right         |      D       |
+|Back          |      S       |
+|Aim with Mouse|              |
+|Shoot         |  Left Click  |
+|--------------|--------------|
+
+You take on the role of a 1960's jazz musician, as you attempt to escape New Yorks finest before they wack you over the head.
+Defend yourself with well timed trumpet blows, and survive as long as you can. 
+In Dootout, it's doot or be dooted, and every note counts as the tenacious tenorman takes up arms against institutionalized police brutality.
