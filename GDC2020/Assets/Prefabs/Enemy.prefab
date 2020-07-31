@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 3.5
-  player: {fileID: 0}
+  player: {fileID: 4111717188946787797, guid: 23ebfbf6474825d43a87d27d4bdf796a, type: 3}
   enemyRigidbody: {fileID: 2580902490215471894}
   clip: {fileID: 8300000, guid: 3828ec38bad2af64187f97358dc43f62, type: 3}
 --- !u!65 &2580902490215471890
