@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PointandShoot : MonoBehaviour
 {
-    
+
     public GameObject crosshair;
     public Transform player;
     public GameObject NoteBulletPrefab;
@@ -48,7 +48,7 @@ public class PointandShoot : MonoBehaviour
             myRigidbody.AddForce(-transform.forward);
 
         }
-    
+
     }
 
     void fireBullet(Vector2 direction, float rotationZ)
@@ -58,7 +58,24 @@ public class PointandShoot : MonoBehaviour
         GameObject bnode = Instantiate(NoteBulletPrefab) as GameObject;
         bnode.transform.position = player.transform.position;
         bnode.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
-        bnode.GetComponent<Rigidbody>().velocity = direction * bulletSpeed;   
+        bnode.GetComponent<Rigidbody>().velocity = direction * bulletSpeed;
 
     }
+
+    public void OnTriggerStay(Collider col)
+    {
+        if (col.CompareTag("Enemy"))
+        {
+            PickUp(col.gameObject);
+        }
+    }
+
+    public void PickUp(GameObject Enemy)
+    {
+        Enemy.SetActive(false);
+        Destroy(Enemy);
+        //pointCount.GetPoints(1);
+
+    }
+
 }
