@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         enemyRigidbody = this.GetComponent<Rigidbody>();
+        player = FindObjectOfType<Player>().transform;
     }
 
     // Update is called once per frame
@@ -52,7 +53,7 @@ public class Enemy : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(clip, new Vector3(0, 0, 0));
             Destroy(gameObject);
-
+            FindObjectOfType<enemySpawner>().SpawnEnemy();
         }
     }
 
