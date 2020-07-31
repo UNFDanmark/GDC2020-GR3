@@ -54,7 +54,7 @@ public class Enemy : MonoBehaviour
             AudioSource.PlayClipAtPoint(clip, new Vector3(0, 0, 0));
             Destroy(gameObject);
             FindObjectOfType<enemySpawner>().SpawnEnemy();
-            FindObjectOfType<PointCount>().GetPoints(1);
+            FindObjectOfType<PointCount>()?.GetPoints(1);
         }
     }
 
