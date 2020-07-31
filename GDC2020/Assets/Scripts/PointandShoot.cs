@@ -13,6 +13,7 @@ public class PointandShoot : MonoBehaviour
     public float knockBack = 2;
     public Rigidbody myRigidbody;
     public Camera playerCam;
+    public PointCount pointCount;
 
     public float bulletSpeed = 60;
 
@@ -74,7 +75,7 @@ public class PointandShoot : MonoBehaviour
     {
         Enemy.SetActive(false);
         Destroy(Enemy);
-        //pointCount.GetPoints(1);
+        pointCount.GetPoints(1);
 
     }
 
