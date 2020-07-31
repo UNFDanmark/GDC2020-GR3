@@ -8,7 +8,7 @@ public class PlayGO : MonoBehaviour
 {
     public void StartButtonClicked()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level");
     }
 
 }
