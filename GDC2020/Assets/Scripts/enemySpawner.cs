@@ -10,21 +10,18 @@ public class enemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //for (int i = 0; i > nrOfEnemies; i++)
-        //{
-        //    SpawnEnemy();
-        //}
-        
-        while (nrOfEnemies < 2)
+        for (int i = 0; i > nrOfEnemies; i++)
         {
             SpawnEnemy();
-        }
+        }     
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+      
     }
 
     public void SpawnEnemy()

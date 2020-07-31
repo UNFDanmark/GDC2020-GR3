@@ -1855,7 +1855,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ebb82bc669c5a4abd78f3c370f3828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 465612708}
+  EnemyPrefab: {fileID: 2580902490215471897, guid: f96f8de4226c4f74295e0885cde8ea5b,
+    type: 3}
   nrOfEnemies: 2
 --- !u!4 &1718443895
 Transform:
